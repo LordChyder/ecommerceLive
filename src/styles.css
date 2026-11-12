@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-bg-dark: #0d0f12;
+  --color-bg-dark-soft: #15181c;
+  --color-bg-light: #ffffff;
+  --color-bg-gray: #f4f5f7;
+  --color-bg-blue-soft: #eaf2fd;
+  --color-text-dark: #0d0f12;
+  --color-text-light: #ffffff;
+  --color-text-muted: #6b7280;
+  --color-text-muted-light: #c7cbd1;
+  --color-accent-blue: #1f6feb;
+  --color-border: #e5e7eb;
+  --color-border-dark: #2a2d33;
+  --max-width: 1440px;
+  --content-padding: 80px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--color-text-dark);
+  background: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary-light {
+  background: #ffffff;
+  color: var(--color-text-dark);
+}
+
+.btn-primary-dark {
+  background: #0d0f12;
+  color: #ffffff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: inherit;
+}
+
+.btn-outline {
+  background: #e9ecf1;
+  color: var(--color-text-dark);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --content-padding: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --content-padding: 20px;
+  }
+}

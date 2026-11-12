@@ -1,0 +1,66 @@
+<div class="promo-bar">
+  <p>Tu próximo nivel empieza aquí. Descubre las ofertas LYDER
+    <a href="#" class="promo-link">→</a>
+  </p>
+</div>
+
+<header class="main-header">
+  <div class="main-header__inner section-inner">
+    <a href="#" class="logo" aria-label="LYDER, inicio">
+      <span class="logo__icon" aria-hidden="true">
+        <img src="logo.png" width="28" height="28" alt="" />
+      </span>
+      <span class="logo__text">L'yder</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#">Comprar</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Nosotros</a></li>
+      </ul>
+    </nav>
+
+    <form class="search" role="search" (submit)="$event.preventDefault()">
+      <svg class="search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <input type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar productos" />
+    </form>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn" aria-label="Mi cuenta">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button type="button" class="icon-btn" aria-label="Carrito de compras">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="21" r="1.4" fill="currentColor"/>
+          <circle cx="18" cy="21" r="1.4" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="category-nav" aria-label="Categorías">
+    <div class="section-inner category-nav__inner">
+      <ul>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Computadoras</a></li>
+        <li><a href="#">Componentes</a></li>
+        <li><a href="#">Periféricos</a></li>
+        <li><a href="#">Accesorios</a></li>
+      </ul>
+      <a href="#" class="advisory-link">Asesoría personalizada
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header>

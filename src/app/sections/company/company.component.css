@@ -1,0 +1,50 @@
+:host {
+  display: block;
+}
+
+.company {
+  background: var(--color-bg-gray);
+  padding: 64px 0;
+}
+
+.company__eyebrow {
+  color: var(--color-accent-blue);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.company__title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.company__description {
+  max-width: 640px;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.company__checklist {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.company__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.company__checklist svg {
+  color: var(--color-accent-blue);
+}

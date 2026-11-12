@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.gaming {
+  background: var(--color-bg-dark);
+  color: #ffffff;
+}
+
+.gaming__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.gaming__copy {
+  max-width: 480px;
+}
+
+.gaming__eyebrow {
+  color: var(--color-accent-blue);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.gaming__title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+
+.gaming__subtitle {
+  color: var(--color-text-muted-light);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.gaming__media {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  flex: 1;
+  max-width: 480px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.gaming__media img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 1024px) {
+  .gaming__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gaming__copy {
+    max-width: 100%;
+  }
+}

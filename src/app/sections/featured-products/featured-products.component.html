@@ -1,0 +1,68 @@
+<section class="featured" aria-labelledby="featured-title">
+  <div class="section-inner">
+    <div class="featured__header">
+      <h2 id="featured-title" class="featured__title">Lo mejor para ti.</h2>
+      <a href="#" class="link-arrow">Ver todos los productos
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="featured__tabs" role="tablist" aria-label="Categorías de productos destacados">
+      @for (tab of tabs; track tab) {
+        <button
+          type="button"
+          role="tab"
+          [attr.aria-selected]="activeTab() === tab"
+          class="featured__tab"
+          [class.is-active]="activeTab() === tab"
+          (click)="selectTab(tab)">
+          {{ tab }}
+        </button>
+      }
+    </div>
+
+    <ul class="featured__grid">
+      @for (product of products; track product.name) {
+        <li class="product-card">
+          <span class="product-card__badge">{{ product.badge }}</span>
+          <img
+            class="product-card__image"
+            [src]="product.image"
+            [alt]="product.name + ' (imagen genérica de referencia)'"
+            loading="lazy"
+            width="400"
+            height="300"
+          />
+          <p class="product-card__brand">{{ product.brand }}</p>
+          <h3 class="product-card__name">{{ product.name }}</h3>
+          <p class="product-card__specs">{{ product.specs }}</p>
+          <p class="product-card__price">
+            @if (product.oldPrice) {
+              <span class="product-card__old-price">{{ product.oldPrice }}</span>
+            }
+          </p>
+          <p class="product-card__price-current">{{ product.price }}</p>
+          <a href="#" class="btn btn-outline product-card__cta">Ver producto
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </li>
+      }
+    </ul>
+
+    <div class="featured__pagination">
+      <span class="featured__page-count">01 / 04</span>
+      <div class="featured__nav">
+        <button type="button" class="icon-btn" aria-label="Producto anterior">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="link-arrow">Siguiente
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
